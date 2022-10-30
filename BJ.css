@@ -1,0 +1,80 @@
+body{
+    background-color: #c9fbffff;
+    color: #040f0fff;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+div{
+    background-color: #A4E0CD;
+    color: #040f0fff;
+    text-align: center;
+    width: auto;
+    Height: auto;
+    margin: auto;
+    padding: 10px;
+    align-content: center;
+    border: dotted;
+    border-color: black;
+    border-width: 2px; 
+}
+button{
+    background-color: #85bdbfff;
+    color: #040f0fff;
+    border-color: beige;
+    
+} 
+.list{
+    background-color: #FFE4F3;
+    color: #040f0fff;
+    text-align: center;
+    width: 200px;
+    Height: auto;
+    margin: auto;
+    padding: 10px;
+    align-content: center;
+    border: dashed;
+    border-color: black;
+    border-width: 1px; 
+}
+.question{
+    background-color: #c9fbffff;
+    border: none;
+
+}
+.invisible{
+    background-color: #c9fbffff;
+    color: #c9fbffff;
+    border: none;
+
+}
+.score{
+    background-color: #FFE4F3;
+    color: #040f0fff;
+    text-align: center;
+    width: 30px;
+    Height: 30px;
+    margin: auto;
+    padding: 10px;
+    align-content: center;
+    border: solid;
+    border-color: black;
+    border-width: 3px; 
+}
+
+
+
+/* CSS HEX 
+--davys-grey: #595758ff;
+--magic-mint: #b8ebd0ff;
+--pale-purple-pantone: #ffe4f3ff;
+--cotton-candy: #ffc8fbff;
+--amaranth-pink: #ff92c2ff;
+*/
+
+/*--light-cyan: #c9fbffff;
+--celeste: #c2fcf7ff;
+--opal: #85bdbfff;
+--cadet: #57737aff;
+--rich-black-fogra-29: #040f0fff;
+61C9A8
+*/
