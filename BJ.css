@@ -31,7 +31,7 @@ button{
     Height: auto;
     margin: auto;
     padding: 10px;
-    align-content: center;
+    /* align-content: center; */
     border: dashed;
     border-color: black;
     border-width: 1px; 
