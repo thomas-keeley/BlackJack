@@ -20,24 +20,38 @@
     <div class="score" id="score"></div><br>
     <button class="swap" onclick="hit()">Hit</button>
     <button class="swap" onclick="stay()">Stay</button><br>
-    <div>
-        Hand 2<div class="list" id="hand2"></div>
-        <div class="score" id="score2"></div>
-    </div>
-    Hand 3<div class="list" id="hand3"></div>
-    <div class="score" id="score3"></div>
-    <div>
-    Hand 4<div class="list" id="hand4"></div>
-    <div class="score" id="score4"></div>
-    </div>
-    Center<div class="list" id="center"></div>
-    <div class="score" id="score5"></div><br><br>
-    <!-- In-Play<div class="list" id="inPlay"></div><br> -->
+    <main>
+        <article class="item">
+            <div>
+                Hand 2<br>
+                <div class="list" id="hand2"></div>
+                <div class="score" id="score2"></div>
+            </div>
+        </article>
+        <article class="item">Hand 3<br>
+            <div class="list" id="hand3"></div>
+            <div class="score" id="score3"></div>
+        </article>
+        <article class="item">
+            <div>
+                Hand 4<br>
+                <div class="list" id="hand4"></div>
+                <div class="score" id="score4"></div>
+            </div>
+        </article>
+        <article class="item">Center<br>
+            <div class="list" id="center"></div>
+            <div class="score" id="score5"></div><br><br>
+        </article>
+
+    </main>
+</body>
+<!-- In-Play<div class="list" id="inPlay"></div><br> -->
 
 
 
 
-    <!-- Yankee swap <br>
+<!-- Yankee swap <br>
         <button class="swap" onclick="swap(0)">1</button>
         <button onclick="swap(1)">2</button>
         <button onclick="swap(2)">3</button>
