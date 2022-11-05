@@ -36,6 +36,19 @@ button{
     border-color: black;
     border-width: 1px; 
 }
+.score{
+    background-color: #FFE4F3;
+    color: #040f0fff;
+    text-align: center;
+    width: 30px;
+    Height: auto;
+    margin: auto;
+    padding: 10px;
+    /* align-content: center; */
+    border: dashed;
+    border-color: black;
+    border-width: 1px; 
+}
 .question{
     background-color: #c9fbffff;
     border: none;
@@ -47,7 +60,7 @@ button{
     border: none;
 
 }
-.score{
+/* .score{
     background-color: #FFE4F3;
     color: #040f0fff;
     text-align: center;
@@ -59,7 +72,7 @@ button{
     border: solid;
     border-color: black;
     border-width: 3px; 
-}
+} */
 .item div{
     display: inline-block;
     
