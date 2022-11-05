@@ -1,11 +1,12 @@
 body{
-    background-color: #c9fbffff;
+    background-color: #Ea8693;
     color: #040f0fff;
     text-align: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 div{
-    background-color: #A4E0CD;
+    background-color: #35654D;
+    
     color: #040f0fff;
     text-align: center;
     width: auto;
@@ -13,7 +14,7 @@ div{
     margin: auto;
     padding: 10px;
     align-content: center;
-    border: dotted;
+    border: dashed;
     border-color: black;
     border-width: 2px; 
 }
@@ -21,10 +22,11 @@ button{
     background-color: #85bdbfff;
     color: #040f0fff;
     border-color: beige;
+    margin: auto;
     
 } 
 .list{
-    background-color: #FFE4F3;
+    background-color: whitesmoke;
     color: #040f0fff;
     text-align: center;
     width: 200px;
@@ -32,12 +34,12 @@ button{
     margin: auto;
     padding: 10px;
     /* align-content: center; */
-    border: dashed;
+    border: solid;
     border-color: black;
     border-width: 1px; 
 }
 .score{
-    background-color: #FFE4F3;
+    background-color: white;
     color: #040f0fff;
     text-align: center;
     width: 30px;
@@ -45,13 +47,28 @@ button{
     margin: auto;
     padding: 10px;
     /* align-content: center; */
-    border: dashed;
+    border: solid;
     border-color: black;
     border-width: 1px; 
 }
 .question{
     background-color: #c9fbffff;
     border: none;
+
+}
+.action{
+    background-color: #35654D;
+    display: inline-block;
+    color: #040f0fff;
+    text-align: center;
+    width: auto;
+    Height: auto;
+    margin: auto;
+    padding: 10px;
+    align-content: center;
+    border: dashed;
+    border-color: black;
+    border-width: 2px;
 
 }
 .invisible{
@@ -77,6 +94,7 @@ button{
     display: inline-block;
     
 }
+
 
 
 
