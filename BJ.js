@@ -1,15 +1,18 @@
 //Declare Deck, Wallet
 deck = ['A♦', 'K♦', 'Q♦', 'J♦', '10♦', '9♦', '8♦', '7♦', '6♦', '5♦', '4♦', '3♦', '2♦', 'A♠', 'K♠', 'Q♠', 'J♠', '10♠', '9♠', '8♠', '7♠', '6♠', '5♠', '4♠', '3♠', '2♠', 'A♣', 'K♣', 'Q♣', 'J♣', '10♣', '9♣', '8♣', '7♣', '6♣', '5♣', '4♣', '3♣', '2♣', 'A♡', 'K♡', 'Q♡', 'J♡', '10♡', '9♡', '8♡', '7♡', '6♡', '5♡', '4♡', '3♡', '2♡']
-debug =  ['A♣', 'A♠', '10♠', 'A♦', '3♡', '5♣', '7♦', 'J♠', 'K♠', 'K♦', 'K♣', '6♣', 'Q♡', 'Q♠', 'J♡', 'K♡', '10♦', '9♦', '6♠', '9♠', '2♠', '7♣', 'J♦', '9♡', '4♡', '3♣', '7♠', '3♠', '5♦', '10♣', '6♡', 'J♣', '2♡', '9♣', '5♠', '7♡', '10♡', '4♠', '2♦', '4♦', '4♣', '5♡', 'Q♣', '8♦', '8♣', '6♦', '3♦', '2♣', 'Q♦', '8♠', '8♡', 'A♡']
+debug = ['A♣', 'A♠', '10♠', 'A♦', '3♡', '5♣', '7♦', 'J♠', 'K♠', 'K♦', 'K♣', '6♣', 'Q♡', 'Q♠', 'J♡', 'K♡', '10♦', '9♦', '6♠', '9♠', '2♠', '7♣', 'J♦', '9♡', '4♡', '3♣', '7♠', '3♠', '5♦', '10♣', '6♡', 'J♣', '2♡', '9♣', '5♠', '7♡', '10♡', '4♠', '2♦', '4♦', '4♣', '5♡', 'Q♣', '8♦', '8♣', '6♦', '3♦', '2♣', 'Q♦', '8♠', '8♡', 'A♡']
 wallet = 1000
 your_hand = []
 player2_hand = []
 player3_hand = []
 player4_hand = []
 dealer_hand = []
+yourBet = 0
 //Commence Betting
-function firstbet() {
-
+function bet(amount) {
+    currentWallet = document.getElementById('wallet').innerHTML
+    yourBet = amount
+    document.getElementById('wallet').innerHTML = currentWallet - amount
 }
 //Deal Deck of Card to four Players and Dealer (One card up 1 down) - CONFIRMED WORKS
 function shuffle() {
@@ -26,9 +29,9 @@ function shuffle() {
 }
 
 function deal() {
-    //array = shuffle()
+    array = shuffle()
     //only used for debugging the Aces issue
-    array = debug
+    //array = debug
     while (your_hand.length < 2) {
         your_hand.unshift(array[0]);
         array.splice(0, 1)
@@ -69,11 +72,13 @@ function dealCards() {
     document.getElementById('score').innerHTML = count(create.yourhand)
     return create
 }
+
 function hit() {
     arr = document.getElementById('hand1').innerHTML.split(",")
     question = count(arr)
     if (question == `BUST`) {
         document.getElementById('score').innerHTML = `BUST`
+        document.getElementById('hit').innerHTML = ""
         return
     } else {
         document.getElementById('score').innerHTML = question
@@ -110,19 +115,28 @@ function aiHit(risk, playerScore, playerTag) {
     }
 
 }
+
+function compareScores() {
+    scr1 = document.getElementById("score").innerHTML
+    scr2 = document.getElementById("score2").innerHTML
+    scr3 = document.getElementById("score3").innerHTML
+    scr4 = document.getElementById("score4").innerHTML
+    scr5 = document.getElementById("score5").innerHTML
+    console.log(scr1,scr2)
+}
 function stay() {
     aiHit(15, 'score2', 'hand2')
     aiHit(14, 'score3', 'hand3')
     aiHit(17, 'score4', 'hand4')
     aiHit(16, 'score5', 'center')
-
+    compareScores()
 }
 
 //Show current amount of points - create function so that it can be used evrytime card is added to the array it wil
 function count(arr) {
     let count = 0
     create = arr
-    
+
     for (card of create) {
         if (card == 'K♦' || card == 'Q♦' || card == 'J♦' || card == '10♦' || card == 'K♠' || card == 'Q♠' || card == 'J♠' || card == '10♠' || card == 'K♣' || card == 'Q♣' || card == 'J♣' || card == '10♣' || card == 'K♡' || card == 'Q♡' || card == 'J♡' || card == '10♡') {
             count += 10
@@ -166,35 +180,37 @@ function count(arr) {
             // }
 
         }
-        console.log(count)
-        if (count > 21) {
-            let mix = 0
-            for (card of create) {
-                console.log(card)
-                
-                if ((card == 'A♦' || card == 'A♣' || card == 'A♠' || card == 'A♡') && mix < 1) {
-                    count = count - 10
-                    mix += 1
-                    
-                } 
-                console.log(count, card, mix)
-            }
-            if (count > 21) {
-                return count = `BUST`
-            }
-            
-            //return count = `BUST`
-        }
-        
     }
+    //Moved this section out of the for loop as it was creating issues with the count. Testing for viability will now commence
+    //I WOULD SAY THE COUNING BUG IS FIXED AS NO ISSUES HAVE BEEN REPORTED
+    console.log("Apples", count)
+    if (count > 21) {
+        let mix = 0
+        for (card of create) {
+            console.log("banana", create)
+            //Taking out mix > 1
+            if ((card == 'A♦' || card == 'A♣' || card == 'A♠' || card == 'A♡') && count > 21) {
+                count = count - 10
+                mix += 1
+
+            }
+            console.log(count, card, mix)
+        }
+        console.log("Beans", count)
+        if (count > 21) {
+            return count = `BUST`
+        }
+
+        //return count = `BUST`
+    }
+    if (count > 21) {
+        return count = `BUST`
+    }
+
+
+
     return count
     //Will need w||k in the future - first card creates an issue. Will not change back to 1 after count is 11. (Is it possible to re-count after cards are delt?)
 
 }
-    //if A in Hand- points are either 1 or 11
-//Ask for Hit or stay
-    //if hit - deal another card and prompt player again
-        //if bust declare loss of money
-    //else skip to next player
-//Run setting for all players ( Declare different risk settings for oppenents)
-//end with dealer showing his cards and playing (hit a soft 16)
+

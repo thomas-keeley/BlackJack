@@ -17,12 +17,20 @@
             <h3>Your Hand</h3>
             <div class="list" id="hand1"></div>
             <h3>Current Score</h3>
-            <button class="swap" onclick="hit()">Hit</button>
+            <button id="hit"class="swap" onclick="hit()">Hit</button>
             <div class="score" id="score"></div>
             <button class="swap" onclick="stay()">Stay</button><br>
         </div>
         <div class="action">
-            <button type="submit" onclick="dealCards()">Deal</button><br>
+            
+             <P>Wallet</P><div class="list" id="wallet">1000</div><br><hr>
+            <button onclick="bet(5)">BET 5</button>
+            <button onclick="bet(10)">BET 10</button>
+            <button onclick="bet(25)">BET 25</button>
+            <button onclick="bet(50)">BET 50</button>
+            <button onclick="bet(100)">BET 100</button>
+            <br> <button type="submit" onclick="dealCards()">Deal</button><br>
+
             
             
     
