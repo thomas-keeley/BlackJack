@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(102, 102, 214);
+    color: silver;
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+label{
+    display: block;
+    margin: 10px;
+}
+h1{
+    text-align: center;
+}
+form{
+    margin: 0 33%;
+    background-color:rgb(48, 48, 125);
+    border-style: none;
+}
+p{
+    text-align: center;
+}
+input{
+    /* width: 55%; */
+    display:block;
+    height: 4%;
+}
+fieldset{
+    padding: 5%;
+    border-style: none;
+}
+.inForm{
+    text-align: left;
+    margin: auto;
+}
+.radio, .check{
+    display: inline;
+    text-align: left;
+}
+textarea{
+    display: block;
+}

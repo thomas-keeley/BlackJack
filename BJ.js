@@ -115,14 +115,32 @@ function aiHit(risk, playerScore, playerTag) {
     }
 
 }
+function bust(scr){
+    if (scr === "BUST"){
+        return scr = 0
+    }
+    return scr
+}
 
 function compareScores() {
-    scr1 = document.getElementById("score").innerHTML
-    scr2 = document.getElementById("score2").innerHTML
-    scr3 = document.getElementById("score3").innerHTML
-    scr4 = document.getElementById("score4").innerHTML
-    scr5 = document.getElementById("score5").innerHTML
-    console.log(scr1,scr2)
+    scr1 = bust(document.getElementById("score").innerHTML)
+    scr2 = bust(document.getElementById("score2").innerHTML)
+    scr3 = bust(document.getElementById("score3").innerHTML)
+    scr4 = bust(document.getElementById("score4").innerHTML)
+    scr5 = bust(document.getElementById("score5").innerHTML)
+    console.log(scr1,scr2,scr3,scr4,scr5)
+    //Currently the scroes are strins and need to be converted to numbers
+    if (scr1 > scr2 && scr1 > scr3 && scr1 > scr4 && scr1 > scr5){
+        console.log(`Winner ${yourBet} times 2 has been added to your total`)
+        document.getElementById('wallet').innerHTML = document.getElementById('wallet').innerHTML + (yourBet * 2)
+    } else if (scr1 >= scr2 && scr1 >= scr3 && scr1 >= scr4 && scr1 >= scr5){
+        console.log(`Push ${yourBet} has been re-added to your total`)
+        document.getElementById('wallet').innerHTML = document.getElementById('wallet').innerHTML + (yourBet)
+    } else{
+        console.log(`You lose ${yourBet}. Try again`)
+    }
+
+
 }
 function stay() {
     aiHit(15, 'score2', 'hand2')

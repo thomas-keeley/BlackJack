@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <img src="">
+    <h1 id="title">Interest Survey</h1>
+    <p id="description">Thank you for taking the time to fill out the survey, we appreciate it.</p>
+    <br>
+    <form id="survey-form" action="https://thomas-keeley.github.io/" method="get">
+        <fieldset>
+            <label id="name-label">Name<br><input placeholder="Enter your Name" required id="name"
+                    type="text" /></label>
+            <label id="email-label">Email<br><input placeholder="Enter your Email" required id="email"
+                    type="email" /></label>
+            <label id="number-label">Age (optional)<br><input placeholder="Enter your Age" id="number" type="number"
+                    min="8" max="100" /></label>
+            <label>Select where you live<br>
+                <select id="dropdown">
+                    <option value="options">Please select an option</option>
+                    <option value="denver">Denver</option>
+                    <option value="wroclaw">Wroclaw</option>
+                    <option value="littleton">Littleton</option>
+                    <option value="opole">Opole</option>
+                    <option value="krakow">Krakow</option>
+                </select></label>
+            <p class="inForm">What Service Are you interested in?</p>    
+            <label class="radio"> 
+                <input  class="radio" name="service" value="Simple Website" type="radio"/> Simple Website
+            </label><br>
+            <label class="radio">
+                <input  class="radio" name="service" value="" type="radio"/> Complex Website
+            </label><br>
+            <label class="radio">
+                <input  class="radio" name="service" value="" type="radio"/> Integration Setup
+            </label><br>
+            <label class="radio">
+                <input class="radio" name="service" value="" type="radio"/> Free Consulatation
+            </label><br>
+            <label>Select your current employment <br><select>
+                    <option value="role">Curent Role Selector</option>
+                    <option value="full-time">Full Time</option>
+                    <option value="part-time">Part Time</option>
+                    <option value="no-time">Unemployed</option>
+                    <option value="contractor">Contractor</option>
+                    <option value="student">Student</option>
+                    <option value="other">Other</option>
+                </select>
+            </label>
+            <p class="inForm">Select your industry Sector (any that apply)</p>
+            <input class="check" type="checkbox" name="" id=""><label class="check">Beauty</label><br>
+            <input class="check" type="checkbox" name="" id=""><label class="check">Automotive</label><br>
+            <input class="check" type="checkbox" name="" id=""><label class="check">Finance</label><br>
+            <input class="check" type="checkbox" name="" id=""><label class="check">Healthcare</label><br>
+            <input class="check" type="checkbox" name="" id=""><label class="check">Technology</label><br>
+            <input class="check" type="checkbox" name="" id=""><label class="check">Other</label><br>
+            <label>Let us know any additional information!
+                <textarea rows="4" cols="40">Add comments here...</textarea><br>
+            We look forward to hearing from you!
+            </label>
+            <input class="submit" id="submit"type="Submit" name="Submit" />
+        </fieldset>
+        
+    </form>
+</body>
+
+</html>
